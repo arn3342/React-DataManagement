@@ -1,0 +1,592 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+*:focus {
+  outline: none;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.topnav {
+  background-color: #2E2F30;
+  overflow: hidden;
+  text-align: center;
+  height: 41px;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.btn-Blue-active {
+  color: #fff;
+  background: #028cea;
+  border: solid #028cea;
+  border-width: 2px;
+  border-radius: 30px;
+  transition: .400s;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button-logOut {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #636363;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-width: 0px;
+}
+
+.active {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+.inactive-tab {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 10px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: white;
+}
+
+.arrows {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Add a grey background to dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button-logOut {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #636363;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-width: 0px;
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+input, button {
+  border: 0;
+  outline: 0;
+}
+input:focus, button:focus{
+  outline: none;
+}
+#field-container {
+  text-align: left;
+  font-weight: 500;
+  padding-bottom: 30px;
+  margin: 0px 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.last-row {
+  border-bottom: 2px solid #979797;
+}
+
+#field-container input, button {
+  width: 100%;
+  border-width: 2px;
+  border: solid #979797;
+  border-radius: 30px;
+  padding: 3px 10px;
+}
+
+#field-container .first-column {
+  padding-left: 0;
+}
+
+#field-container .last-column {
+  padding-right: 0;
+}
+
+#field-container .last-column .col-md-5 {
+  padding: 0;
+}
+
+#field-container .last-column .col-md-1 {
+  padding: 0px 0px 0px 10px;
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+}
+
+.topnav a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* Table styles start from here */
+
+table tr:nth-child(2) td:first-child {
+  border-top-left-radius: 16px;
+}
+
+table tr:nth-child(2) td:last-child {
+  border-top-right-radius: 16px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 16px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
+}
+
+.table-warning:hover td {
+  background-color: #ececec !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1 !important;
+}
+
+.table-hover tbody th:hover {
+  background-color: #d0e2f6;
+  color: #000;
+}
+
+.table-hover tbody th:hover img {
+  opacity: 0;
+}
+
+.table-hover tbody th {
+  background-color: #eaf1f9;
+  cursor: pointer;
+  font-weight: 500 !important;
+  font-size: .90rem;
+  color: #000;
+  text-align: left;
+  /* padding-bottom: 0px; */
+}
+
+tbody {
+  display: block;
+  overflow: auto;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  /* even columns width , fix width of table too*/
+}
+
+#thBottom {
+  padding-bottom: 20px;
+}
+
+.no-left {
+  padding-left: 0 !important;
+}
+.btn-Blue{
+  color: #028cea;
+  background: #fff;
+  border: solid #028cea;
+  border: 2px solid #028cea;
+  padding: 3px 20px;
+  border-radius: 30px;
+  transition: .400s;
+}
+.btn-Blue:hover{
+  color: #fff;
+  background: #028cea;
+}
+.table-hover tbody {
+  height: 500px !important;
+  overflow-y: scroll;
+}
+
+.table-hover thead th {
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+}
+.table-hover thead th img{
+  margin-left: 10px;
+}
+.table-hover {
+  height: 600px !important;
+  overflow-y: scroll;
+}
+
+.table-warning td {
+  background-color: #ffffff;
+}
+
+.round-top-left {
+  border-top-left-radius: 30px;
+}
+
+.round-top-right {
+  border-top-right-radius: 30px;
+}
+
+.table-success td {
+  background-color: #B4FEC1;
+  padding-bottom: 0px;
+}
+
+.input-transparent {
+  background: transparent;
+}
+
+.input-border {
+  border: 2px solid #c3c3c3;
+}
+
+.calendar-fixed {
+  position: absolute;
+  display: none;
+}
+
+.hidden-element {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hidden-element-visible {
+  position: static;
+  z-index: auto;
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s ease-out;
+}
+.btn-transparent{
+  border: 0px;
+  background: transparent;
+  height: 100%;
+}
+.table-warning {
+  background-color: #fff !important;
+  /* background-color: #cdcdcd !important; */
+  font-size: 0.9em !important;
+  font-weight: 400 !important;
+}
+
+.table-warning td {
+  /* background-color: #9bc86a !important; */
+  /* background-color: #fff !important; */
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 0px !important;
+}
+
+#tableContainer thead th {
+  position: sticky;
+  text-align: left;
+}
+
+#tableContainer {
+  border: 1px solid #ececec;
+  border-top: 0px;
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+  transform: scale(0.2);
+}
+.status-button {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  min-width: 110px;
+  font-size: 15px;
+  height: 35px;
+  border: 0;
+  text-align: center;
+  width: auto;
+  max-width: 130px;
+  padding: 4px 0px 4px 10px;
+  box-shadow: 0px 1px 1px #888888;
+}
+
+.status-button img {
+  height: 20px;
+  widows: 20px;
+  margin-right: 10px;
+}
+
+.searchBox {
+  display: inline-block;
+  float: right;
+  border-radius: 8px;
+  border: 0;
+  color: #0080ff;
+  font-size: 14px;
+  padding: 8px 0px 8px 15px;
+  background: #ececec;
+  min-width: 300px;
+  outline: none;
+}
+
+.searchIcon {
+  float: left;
+  opacity: 0.5;
+  width: 18px;
+  height: 18px;
+}
+
+.sortIcon {
+  margin-left: 8px;
+  margin-top: -3px;
+  content: url("/src/assets/sortIcon.png");
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.headerContainer {
+  border-bottom: 0px;
+  margin: 0px 30px;
+}
+
+.checkmark {
+  pointer-events: none;
+  margin: 3px -15px 0px 4px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 1px 1px #888888;
+  padding-right: 10px;
+  border-radius: 5px;
+  border-width: 5px;
+  border: 1px solid #d0d0d0;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 30px;
+  width: 55px;
+}
+
+/* On mouse-over, add a grey background color */
+
+.checkboxContainer:hover input~.checkmark {
+  background-color: #ebebeb;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.checkboxContainer input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+.table-border {
+  border: 1px solid #979797;
+  border-radius: 30px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.checkboxContainer input:checked~.checkmark:after {
+  display: block;
+}
+
+table {
+  border-collapse: separate !important;
+  border: 2px solid #979797;
+}
+
+/* Style the checkmark/indicator */
+
+.checkboxContainer .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.btn-success {
+  float: right;
+  padding: 8px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 120px;
+  height: 42px;
+  font-weight: 500 !important;
+  margin-bottom: 12px;
+}
+
+/* width */
+
+#tableContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+
+#tableContainer::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  transition: 0.6s;
+}
+
+/* Handle */
+
+#tableContainer::-webkit-scrollbar-thumb {
+  background: #6cbcff;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+
+#tableContainer::-webkit-scrollbar-thumb:hover {
+  background: #2398fb;
+  width: 12px;
+}
+
+/* Table styles end here */
